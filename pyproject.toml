@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "thai-subtitle-downloader"  # Choose a name for your project on PyPI
+version = "0.1.0"
+description = "A tool to bulk download Thai (or any) subtitles from OpenSubtitles"
+readme = "README.md"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "requests",  # List your dependencies here
+]
+
+[project.urls]
+Homepage = "https://github.com/wwdkl95699-oss/Thai-Movie-Subtitle-Downloader"
+Issues = "https://github.com/wwdkl95699-oss/Thai-Movie-Subtitle-Downloader/issues"
+
+# This section creates the command-line script 'thai-sub-dl'
+[project.scripts]
+thai-sub-dl = "thai_sub_dl.core:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/thai_sub_dl"]

@@ -499,5 +499,21 @@ def main():
     # Process movies from file
     downloader.process_movies('movies.txt')
 
+# src/thai_sub_dl/core.py
+# ... (keep all your imports and the ThaiMovieDownloader class as they are)
+
+def main():
+    """The main entry point for the command-line script."""
+    print("="*50)
+    print("THAI MOVIE SUBTITLE DOWNLOADER")
+    print("="*50)
+    
+    # Initialize downloader
+    downloader = ThaiMovieDownloader('open-subs-api-key.txt')
+    
+    # Process movies from file
+    downloader.process_movies('movies.txt')
+
+# This block ensures the script still runs when executed directly
 if __name__ == "__main__":
     main()
